@@ -10,7 +10,7 @@ public:
 	static Singleton* getInstance() { return &single; } // 3.获取类的唯一实例对象的接口方法
 
 private:
-	static Singleton *single; // 2.定义一个唯一的实例对象
+	static Singleton single; // 2.定义一个唯一的实例对象
 	Singleton() { cout << "Singleton()" << endl; } // 1.构造函数私有化
 	~Singleton() { cout << "~Cingleton()" << endl; }
 	Singleton(const Singleton&) = delete;
@@ -21,6 +21,7 @@ Singleton Singleton::single; // 4.在类外定义并初始化唯一的实例对�
 
 #endif
 
+#if 1
 /*
 单例模式：保证一个类仅有一个实例，并且提供一个全局访问点。
 
@@ -42,6 +43,7 @@ private:
 	Singleton& operator=(const Singleton&) = delete;
 
 };
+#endif
 
 int main()
 {
